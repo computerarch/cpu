@@ -6,7 +6,13 @@
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
@@ -57,22 +63,22 @@
   </circuit>
   <circuit name="ALU">
     <a name="circuit" val="ALU"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
+    <a name="clabel" val="525"/>
+    <a name="clabelup" val="south"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
       <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
-      <rect fill="#ffffff" height="219" stroke="#000000" stroke-width="2" width="175" x="50" y="50"/>
-      <text font-family="SansSerif" font-size="64" text-anchor="middle" x="138" y="179">ALU</text>
-      <circ-port height="8" pin="560,120" width="8" x="136" y="46"/>
-      <circ-port height="8" pin="180,130" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="180,200" width="8" x="46" y="156"/>
-      <circ-port height="8" pin="120,250" width="8" x="46" y="256"/>
-      <circ-port height="10" pin="720,250" width="10" x="225" y="145"/>
-      <circ-port height="10" pin="360,710" width="10" x="75" y="265"/>
-      <circ-port height="10" pin="520,710" width="10" x="115" y="265"/>
-      <circ-port height="10" pin="630,720" width="10" x="155" y="265"/>
-      <circ-port height="10" pin="720,720" width="10" x="195" y="265"/>
+      <rect fill="#ffffff" height="141" stroke="#000000" stroke-width="2" width="120" x="50" y="50"/>
+      <text font-family="SansSerif" font-size="52" text-anchor="middle" x="109" y="143">ALU</text>
+      <circ-port height="8" pin="560,120" width="8" x="106" y="46"/>
+      <circ-port height="8" pin="180,130" width="8" x="46" y="66"/>
+      <circ-port height="8" pin="180,200" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="120,250" width="8" x="46" y="166"/>
+      <circ-port height="10" pin="720,250" width="10" x="165" y="115"/>
+      <circ-port height="10" pin="360,710" width="10" x="75" y="185"/>
+      <circ-port height="10" pin="520,710" width="10" x="95" y="185"/>
+      <circ-port height="10" pin="630,720" width="10" x="115" y="185"/>
+      <circ-port height="10" pin="720,720" width="10" x="135" y="185"/>
       <circ-anchor facing="east" height="6" width="6" x="47" y="47"/>
     </appear>
     <wire from="(480,230)" to="(480,300)"/>
@@ -80,8 +86,8 @@
     <wire from="(480,230)" to="(540,230)"/>
     <wire from="(190,240)" to="(190,310)"/>
     <wire from="(190,540)" to="(190,610)"/>
-    <wire from="(210,520)" to="(210,590)"/>
     <wire from="(210,220)" to="(210,290)"/>
+    <wire from="(210,520)" to="(210,590)"/>
     <wire from="(340,660)" to="(530,660)"/>
     <wire from="(350,160)" to="(530,160)"/>
     <wire from="(360,300)" to="(480,300)"/>
@@ -154,66 +160,21 @@
     <wire from="(530,160)" to="(530,210)"/>
     <wire from="(320,630)" to="(520,630)"/>
     <wire from="(530,280)" to="(540,280)"/>
-    <comp lib="0" loc="(630,720)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-      <a name="label" val="sub out"/>
-    </comp>
-    <comp lib="1" loc="(350,160)" name="AND Gate">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(120,250)" name="Pin">
-      <a name="label" val="carry in"/>
-    </comp>
-    <comp lib="0" loc="(180,200)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="input B"/>
-    </comp>
-    <comp lib="2" loc="(580,250)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="3"/>
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="1" loc="(360,300)" name="XOR Gate">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="3" loc="(340,660)" name="Divider">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="3" loc="(340,450)" name="Adder">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(720,250)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="label" val="result"/>
-    </comp>
-    <comp lib="0" loc="(520,710)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="label" val="multi out"/>
-    </comp>
-    <comp lib="0" loc="(720,720)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="output" val="true"/>
-      <a name="label" val="add out"/>
-    </comp>
-    <comp lib="1" loc="(350,230)" name="OR Gate">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="3" loc="(340,600)" name="Multiplier">
-      <a name="width" val="16"/>
-    </comp>
     <comp lib="0" loc="(180,130)" name="Pin">
       <a name="width" val="16"/>
       <a name="label" val="input A"/>
+    </comp>
+    <comp lib="3" loc="(340,660)" name="Divider">
+      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(560,120)" name="Pin">
       <a name="facing" val="south"/>
       <a name="width" val="3"/>
       <a name="label" val="selector"/>
+    </comp>
+    <comp lib="0" loc="(180,200)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="input B"/>
     </comp>
     <comp lib="0" loc="(360,710)" name="Pin">
       <a name="facing" val="north"/>
@@ -221,11 +182,56 @@
       <a name="width" val="16"/>
       <a name="label" val="divide out"/>
     </comp>
+    <comp lib="0" loc="(630,720)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="label" val="sub out"/>
+    </comp>
+    <comp lib="1" loc="(350,230)" name="OR Gate">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="1" loc="(350,160)" name="AND Gate">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(580,250)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="3"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(520,710)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="multi out"/>
+    </comp>
+    <comp lib="3" loc="(340,600)" name="Multiplier">
+      <a name="width" val="16"/>
+    </comp>
     <comp lib="1" loc="(360,380)" name="NOR Gate">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(120,250)" name="Pin">
+      <a name="label" val="carry in"/>
+    </comp>
+    <comp lib="1" loc="(360,300)" name="XOR Gate">
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="3" loc="(340,450)" name="Adder">
       <a name="width" val="16"/>
     </comp>
     <comp lib="3" loc="(340,530)" name="Subtractor">
       <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(720,720)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="label" val="add out"/>
+    </comp>
+    <comp lib="0" loc="(720,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="result"/>
     </comp>
   </circuit>
 </project>

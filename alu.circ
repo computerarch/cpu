@@ -239,6 +239,16 @@
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="64" stroke="#000000" stroke-width="2" width="50" x="50" y="50"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="73" y="76">ALU</text>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="75" y="97">Control</text>
+      <circ-port height="8" pin="410,160" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="70,190" width="8" x="46" y="96"/>
+      <circ-port height="10" pin="590,140" width="10" x="95" y="75"/>
+      <circ-anchor facing="east" height="6" width="6" x="97" y="77"/>
+    </appear>
     <wire from="(450,150)" to="(500,150)"/>
     <wire from="(110,210)" to="(230,210)"/>
     <wire from="(530,140)" to="(590,140)"/>

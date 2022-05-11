@@ -1,14 +1,14 @@
 `timescale 1ns / 1ps
 module alu_mod(a,b,alu_select,alu_out,carry);
-    input [19:0] a,b;                 
+    input [15:0] a,b;                 
     input [2:0] alu_select;
-    output [19:0] alu_out;
+    output [15:0] alu_out;
     output carry;
-	 reg [19:0] res;
-	 wire [20:0] tmp_carry;
+	 reg [15:0] res;
+	 wire [16:0] tmp_carry;
 	 assign alu_out = res;
 	 assign tmp_carry = {1'b0,a} + {1'b0,b};//calculate carry
-	 assign carry = tmp_carry[20];
+	 assign carry = tmp_carry[16];
 	 always @(*)
     begin
         case(alu_select)

@@ -33,7 +33,6 @@ module Register_file(
 	reg [15:0] r1;
 	reg [15:0] r2;
 	reg [15:0] r3;
-	wire tmp;
    always @(*) begin
 	   case (rd_AddrA)
 	0:begin 

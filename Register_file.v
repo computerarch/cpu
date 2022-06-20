@@ -29,11 +29,13 @@ module Register_file(
    output reg [15:0] rd_DataB,
 	input register_dis
 	);
-	reg [15:0] 	 r0, r1, r2, r3;
+	reg [15:0] r0;
+	reg [15:0] r1;
+	reg [15:0] r2;
+	reg [15:0] r3;
 	wire tmp;
-	assign tmp =(register_dis)?rd_AddrB:rd_AddrA;
    always @(*) begin
-      case (tmp)
+	   case (rd_AddrA)
 	0:begin 
 	rd_DataA = r0;
 	end
@@ -50,7 +52,7 @@ module Register_file(
 	rd_DataA = 0;
 	end
       endcase
-	 case (tmp)
+	   case (rd_AddrB)
 	0:begin
 	rd_DataB = r0;
 	end

@@ -26,9 +26,7 @@ module Register_file(
    input [2:0] rd_AddrA,
    output reg [15:0] rd_DataA,
    input [2:0] rd_AddrB,
-   output reg [15:0] rd_DataB,
-	input register_dis
-	);
+   output reg [15:0] rd_DataB);
 	reg [15:0] r0;
 	reg [15:0] r1;
 	reg [15:0] r2;

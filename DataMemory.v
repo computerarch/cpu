@@ -27,7 +27,7 @@ input Memwrite;
 input Memread;
 input [15:0] Datawrite;
 output reg[15:0] Readdata;
-reg [7:0] mem [15:0];	 
+	reg [99:0] mem [15:0];	 
 always @*
 	begin
 		mem[0]=0000000000010100; //20
